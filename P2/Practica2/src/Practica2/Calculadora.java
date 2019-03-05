@@ -64,6 +64,11 @@ public class Calculadora extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jButton1KeyTyped(evt);
+            }
+        });
 
         jButton2.setText("2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,6 +183,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 20)); // NOI18N
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -386,6 +392,11 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTextField1KeyTyped
 
+    private void jButton1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyTyped
+        if(evt.getKeyCode() == KeyEvent.VK_1){
+            jTextField1.setText("1");
+        }
+    }//GEN-LAST:event_jButton1KeyTyped
     /**
      * @param args the command line arguments
      */
@@ -425,7 +436,9 @@ public class Calculadora extends javax.swing.JFrame {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine engine = manager.getEngineByName("JavaScript");
         try {
-            jTextField1.setText(engine.eval(expression).toString());
+            if(!jTextField1.getText().equals("")){
+                jTextField1.setText(engine.eval(expression).toString());
+            }
         } catch (ScriptException ex) {
             JOptionPane.showMessageDialog(new JFrame(), "Error en la expresión", "Mensaje", 0);
         }
