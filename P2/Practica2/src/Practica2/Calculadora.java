@@ -22,6 +22,7 @@ public class Calculadora extends javax.swing.JFrame {
      */
     public Calculadora() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -62,11 +63,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jButton1KeyTyped(evt);
             }
         });
 
@@ -183,7 +179,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 20)); // NOI18N
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -384,19 +380,10 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1KeyPressed
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
-        if(evt.getKeyChar() != 'a'){
-//            jTextField1.setText(String.valueOf(evt.getKeyChar()));
-        }
-        else{
+        if(evt.getKeyChar() >= 'A' && evt.getKeyChar() != 'e'){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField1KeyTyped
-
-    private void jButton1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyTyped
-        if(evt.getKeyCode() == KeyEvent.VK_1){
-            jTextField1.setText("1");
-        }
-    }//GEN-LAST:event_jButton1KeyTyped
     /**
      * @param args the command line arguments
      */
@@ -434,7 +421,7 @@ public class Calculadora extends javax.swing.JFrame {
     
     private void evaluateMathExpression(String expression){
         ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine engine = manager.getEngineByName("JavaScript");
+        ScriptEngine engine = manager.getEngineByName("js");
         try {
             if(!jTextField1.getText().equals("")){
                 jTextField1.setText(engine.eval(expression).toString());
