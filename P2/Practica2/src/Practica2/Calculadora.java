@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
  *
- * @author daniel
+ * @author Daniel Ranchal Parrado
  */
 public class Calculadora extends javax.swing.JFrame {
 
