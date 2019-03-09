@@ -262,6 +262,12 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton24.setText("Redo");
+        jButton24.setFocusable(false);
+        jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton24MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -368,9 +374,9 @@ public class Calculadora extends javax.swing.JFrame {
                             .addComponent(jButton22)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -557,11 +563,14 @@ public class Calculadora extends javax.swing.JFrame {
         String currentText = jTextField1.getText();
         String newText = currentText.substring(0, caretPosition) + 
         "sqrt()" + currentText.substring(caretPosition, currentText.length());
+        
+        int lenghtSecondPartofString = currentText.substring(caretPosition, currentText.length())
+                .length();
 
         jTextField1.setText(newText);
 
         caretPosition = jTextField1.getCaretPosition();
-        jTextField1.setCaretPosition(caretPosition - 1);        
+        jTextField1.setCaretPosition(caretPosition - lenghtSecondPartofString - 1);        
     }//GEN-LAST:event_jButton20MouseClicked
 
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
@@ -570,10 +579,13 @@ public class Calculadora extends javax.swing.JFrame {
         String newText = currentText.substring(0, caretPosition) + 
         "pow(, )" + currentText.substring(caretPosition, currentText.length());
 
+        int lenghtSecondPartofString = currentText.substring(caretPosition, currentText.length())
+                .length();
+        
         jTextField1.setText(newText);
 
         caretPosition = jTextField1.getCaretPosition();
-        jTextField1.setCaretPosition(caretPosition - 3);
+        jTextField1.setCaretPosition(caretPosition - lenghtSecondPartofString - 3);
     }//GEN-LAST:event_jButton19MouseClicked
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
@@ -615,6 +627,10 @@ public class Calculadora extends javax.swing.JFrame {
     private void jButton23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseClicked
         undoOperations();
     }//GEN-LAST:event_jButton23MouseClicked
+
+    private void jButton24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MouseClicked
+        redoOperations();
+    }//GEN-LAST:event_jButton24MouseClicked
     /**
      * @param args the command line arguments
      */
@@ -656,7 +672,7 @@ public class Calculadora extends javax.swing.JFrame {
         try {
             if(!expression.equals("")){
                 history.add(expression);
-//                iterator = history.
+                lastElement();
                 expression = expression.replace("sqrt", "Math.sqrt")
                         .replace("pow", "Math.pow")
                         .replace("E", "Math.E")
@@ -671,23 +687,30 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }
     
+    private void lastElement(){
+        iterador = history.listIterator();
+        while(iterador.hasNext()){
+            iterador.next();
+        }
+    }
+    
     private void undoOperations(){
-        if(history.isEmpty()){
+        if(history.isEmpty() || ! iterador.hasPrevious()){
             jTextField1.setText("");
         }
         else{
-            jTextField1.setText(history.get(history.size() - 1));
-            
-            history.remove(history.size() - 1);
+            jTextField1.setText(iterador.previous());
         }
     }
     
     private void redoOperations(){
-        
+        if(iterador.hasNext()){
+            jTextField1.setText(iterador.next());
+        }
     }
 
-    private ArrayList<String> history = new ArrayList<String>();
-//    private Iterator<String> iterator = history.iterator();
+    private LinkedList<String> history = new LinkedList<String>();
+    private ListIterator<String> iterador;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
