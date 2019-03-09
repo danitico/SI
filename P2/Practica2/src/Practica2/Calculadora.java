@@ -60,6 +60,7 @@ public class Calculadora extends javax.swing.JFrame {
         setResizable(false);
 
         jButton1.setText("1");
+        jButton1.setFocusable(false);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -67,6 +68,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton2.setText("2");
+        jButton2.setFocusable(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -74,6 +76,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton3.setText("3");
+        jButton3.setFocusable(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -81,6 +84,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton4.setText("4");
+        jButton4.setFocusable(false);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
@@ -88,6 +92,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton5.setText("5");
+        jButton5.setFocusable(false);
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
@@ -95,6 +100,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton6.setText("6");
+        jButton6.setFocusable(false);
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -102,6 +108,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton7.setText("7");
+        jButton7.setFocusable(false);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
@@ -109,6 +116,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton8.setText("8");
+        jButton8.setFocusable(false);
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -116,6 +124,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton9.setText("9");
+        jButton9.setFocusable(false);
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -123,6 +132,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton10.setText("0");
+        jButton10.setFocusable(false);
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton10MouseClicked(evt);
@@ -130,6 +140,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton11.setText("%");
+        jButton11.setFocusable(false);
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton11MouseClicked(evt);
@@ -137,6 +148,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton12.setText(".");
+        jButton12.setFocusable(false);
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton12MouseClicked(evt);
@@ -144,6 +156,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton13.setText("+");
+        jButton13.setFocusable(false);
         jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton13MouseClicked(evt);
@@ -151,6 +164,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton14.setText("-");
+        jButton14.setFocusable(false);
         jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton14MouseClicked(evt);
@@ -158,6 +172,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton15.setText("*");
+        jButton15.setFocusable(false);
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton15MouseClicked(evt);
@@ -165,6 +180,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton16.setText("/");
+        jButton16.setFocusable(false);
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton16MouseClicked(evt);
@@ -172,6 +188,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton17.setText("C");
+        jButton17.setFocusable(false);
         jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton17MouseClicked(evt);
@@ -180,11 +197,6 @@ public class Calculadora extends javax.swing.JFrame {
 
         jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 20)); // NOI18N
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField1KeyTyped(evt);
@@ -195,6 +207,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton18.setText("=");
+        jButton18.setFocusable(false);
         jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton18MouseClicked(evt);
@@ -294,77 +307,167 @@ public class Calculadora extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        jTextField1.setText(jTextField1.getText() + "1");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "1" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        jTextField1.setText(jTextField1.getText() + "2");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "2" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        jTextField1.setText(jTextField1.getText() + "3");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "3" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        jTextField1.setText(jTextField1.getText() + "4");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "4" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        jTextField1.setText(jTextField1.getText() + "5");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "5" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        jTextField1.setText(jTextField1.getText() + "6");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "6" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        jTextField1.setText(jTextField1.getText() + "7");
+                int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "7" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        jTextField1.setText(jTextField1.getText() + "8");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "8" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-        jTextField1.setText(jTextField1.getText() + "9");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "9" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-        jTextField1.setText(jTextField1.getText() + "0");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "0" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        jTextField1.setText(jTextField1.getText() + "%");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "%" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
-        jTextField1.setText(jTextField1.getText() + ".");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "." + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton12MouseClicked
 
     private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
-        jTextField1.setText(jTextField1.getText() + "+");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "+" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton13MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
-        jTextField1.setText(jTextField1.getText() + "-");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "-" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton14MouseClicked
 
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
-        jTextField1.setText(jTextField1.getText() + "*");
-    }//GEN-LAST:event_jButton15MouseClicked
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "*" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);    }//GEN-LAST:event_jButton15MouseClicked
 
     private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
-        jTextField1.setText(jTextField1.getText() + "/");
+        int caretPosition = jTextField1.getCaretPosition();
+        String currentText = jTextField1.getText();
+        String newText = currentText.substring(0, caretPosition) + 
+        "/" + currentText.substring(caretPosition, currentText.length());
+        
+        jTextField1.setText(newText);
+        jTextField1.setCaretPosition(caretPosition + 1);
     }//GEN-LAST:event_jButton16MouseClicked
 
     private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
         jTextField1.setText("");
-        
     }//GEN-LAST:event_jButton17MouseClicked
 
     private void jButton18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseClicked
