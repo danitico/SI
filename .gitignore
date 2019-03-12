@@ -7,3 +7,4 @@ dist/
 nbdist/
 .nb-gradle/
 *.zip
+/P3/Practica3/nbproject/private/
