@@ -68,7 +68,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Locale.setDefault(Resources.getSystem().getConfiguration().locale.getLanguage());"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Locale.setDefault(new Locale(System.getProperty(&quot;user.language&quot;), System.getProperty(&quot;user.country&quot;)));"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -88,8 +88,11 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if(Locale.getDefault().equals(new Locale(&quot;ENGLISH&quot;, &quot;GB&quot;))){&#xa;    System.out.println(&quot;hola&quot;);&#xa;    jComboBox1.setSelectedIndex(1);&#xa;}&#xa;else if(Locale.getDefault().equals(new Locale(&quot;FRENCH&quot;, &quot;FRANCE&quot;))){&#xa;    System.out.println(&quot;adios&quot;);&#xa;    jComboBox1.setSelectedIndex(2);&#xa;}&#xa;else{&#xa;    System.out.println(&quot;pipo&quot;);&#xa;    jComboBox1.setSelectedIndex(0);&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if(Locale.getDefault().equals(new Locale(&quot;en&quot;, &quot;GB&quot;))){&#xa;    System.out.println(&quot;hola&quot;);&#xa;    jComboBox1.setSelectedIndex(1);&#xa;}&#xa;else if(Locale.getDefault().equals(new Locale(&quot;fr&quot;, &quot;FR&quot;))){&#xa;    System.out.println(&quot;adios&quot;);&#xa;    jComboBox1.setSelectedIndex(2);&#xa;}&#xa;else{&#xa;    System.out.println(&quot;pipo&quot;);&#xa;    jComboBox1.setSelectedIndex(0);&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
