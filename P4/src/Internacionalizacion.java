@@ -42,22 +42,19 @@ public class Internacionalizacion extends javax.swing.JFrame {
             }
         });
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Bundle"); // NOI18N
-        jLabel1.setText(bundle.getString("Internacionalizacion.jLabel1.text")); // NOI18N
+        ResourceBundle bundle = ResourceBundle.getBundle("Bundle", Locale.getDefault());
+        jLabel1.setText(bundle.getString("Internacionalizacion.jLabel1.text"));
 
-        jButton1.setText(bundle.getString("Internacionalizacion.jButton1.text")); // NOI18N
+        jButton1.setText(bundle.getString("Internacionalizacion.jButton1.text"));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "English", "Français" }));
         if(Locale.getDefault().equals(new Locale("en", "GB"))){
-            System.out.println("hola");
             jComboBox1.setSelectedIndex(1);
         }
         else if(Locale.getDefault().equals(new Locale("fr", "FR"))){
-            System.out.println("adios");
             jComboBox1.setSelectedIndex(2);
         }
         else{
-            System.out.println("pipo");
             jComboBox1.setSelectedIndex(0);
         }
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,29 +68,30 @@ public class Internacionalizacion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jButton1))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(6, 6, 6))
         );
 
         pack();
@@ -117,6 +115,10 @@ public class Internacionalizacion extends javax.swing.JFrame {
                 Locale.setDefault(new Locale("fr", "FR"));
                 break;
         }        
+        ResourceBundle bundle = ResourceBundle.getBundle("Bundle", Locale.getDefault());
+        
+        jLabel1.setText(bundle.getString("Internacionalizacion.jLabel1.text"));
+        jButton1.setText(bundle.getString("Internacionalizacion.jButton1.text"));
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
