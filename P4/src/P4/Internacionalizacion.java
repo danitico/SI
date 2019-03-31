@@ -17,6 +17,7 @@ public class Internacionalizacion extends javax.swing.JFrame {
      */
     public Internacionalizacion() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,8 +31,12 @@ public class Internacionalizacion extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         Locale.setDefault(new Locale(System.getProperty("user.language"), System.getProperty("user.country")));
-        System.out.println(System.getProperty("user.language"));
-        System.out.println(System.getProperty("user.country"));
+
+        if(!Locale.getDefault().equals(Locale.ENGLISH) &&
+            !Locale.getDefault().equals(Locale.FRENCH) &&
+            !Locale.getDefault().equals(new Locale("es", "ES"))){
+            Locale.setDefault(new Locale("en", "GB"));
+        }
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -44,20 +49,20 @@ public class Internacionalizacion extends javax.swing.JFrame {
             }
         });
 
-        ResourceBundle bundle = ResourceBundle.getBundle("Bundle", Locale.getDefault());
+        ResourceBundle bundle = ResourceBundle.getBundle("P4.Bundle", Locale.getDefault());
         jLabel1.setText(bundle.getString("Internacionalizacion.jLabel1.text"));
 
         jButton1.setText(bundle.getString("Internacionalizacion.jButton1.text"));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "English", "Français" }));
-        if(Locale.getDefault().equals(new Locale("en", "GB"))){
-            jComboBox1.setSelectedIndex(1);
+        if(Locale.getDefault().equals(new Locale("es", "ES"))){
+            jComboBox1.setSelectedIndex(0);
         }
         else if(Locale.getDefault().equals(new Locale("fr", "FR"))){
             jComboBox1.setSelectedIndex(2);
         }
         else{
-            jComboBox1.setSelectedIndex(0);
+            jComboBox1.setSelectedIndex(1);
         }
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,12 +86,12 @@ public class Internacionalizacion extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(166, 166, 166)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
@@ -117,7 +122,7 @@ public class Internacionalizacion extends javax.swing.JFrame {
                 Locale.setDefault(new Locale("fr", "FR"));
                 break;
         }        
-        ResourceBundle bundle = ResourceBundle.getBundle("Bundle", Locale.getDefault());
+        ResourceBundle bundle = ResourceBundle.getBundle("P4.Bundle", Locale.getDefault());
         
         jLabel1.setText(bundle.getString("Internacionalizacion.jLabel1.text"));
         jButton1.setText(bundle.getString("Internacionalizacion.jButton1.text"));

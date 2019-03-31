@@ -38,14 +38,14 @@
                       <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -71,8 +71,8 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Locale.setDefault(new Locale(System.getProperty(&quot;user.language&quot;), System.getProperty(&quot;user.country&quot;)));&#xa;System.out.println(System.getProperty(&quot;user.language&quot;));&#xa;System.out.println(System.getProperty(&quot;user.country&quot;));"/>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ResourceBundle bundle = ResourceBundle.getBundle(&quot;Bundle&quot;, Locale.getDefault());"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Locale.setDefault(new Locale(System.getProperty(&quot;user.language&quot;), System.getProperty(&quot;user.country&quot;)));&#xa;&#xa;if(!Locale.getDefault().equals(Locale.ENGLISH) &amp;&amp;&#xa;    !Locale.getDefault().equals(Locale.FRENCH) &amp;&amp;&#xa;    !Locale.getDefault().equals(new Locale(&quot;es&quot;, &quot;ES&quot;))){&#xa;    Locale.setDefault(new Locale(&quot;en&quot;, &quot;GB&quot;));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ResourceBundle bundle = ResourceBundle.getBundle(&quot;P4.Bundle&quot;, Locale.getDefault());"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -96,7 +96,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if(Locale.getDefault().equals(new Locale(&quot;en&quot;, &quot;GB&quot;))){&#xa;    jComboBox1.setSelectedIndex(1);&#xa;}&#xa;else if(Locale.getDefault().equals(new Locale(&quot;fr&quot;, &quot;FR&quot;))){&#xa;    jComboBox1.setSelectedIndex(2);&#xa;}&#xa;else{&#xa;    jComboBox1.setSelectedIndex(0);&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if(Locale.getDefault().equals(new Locale(&quot;es&quot;, &quot;ES&quot;))){&#xa;    jComboBox1.setSelectedIndex(0);&#xa;}&#xa;else if(Locale.getDefault().equals(new Locale(&quot;fr&quot;, &quot;FR&quot;))){&#xa;    jComboBox1.setSelectedIndex(2);&#xa;}&#xa;else{&#xa;    jComboBox1.setSelectedIndex(1);&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
