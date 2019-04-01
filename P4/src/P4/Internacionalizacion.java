@@ -6,8 +6,9 @@
 
 /**
  *
- * @author daniel
+ * @author Daniel Ranchal Parrado
  */
+package P4;
 import java.util.*;
 
 public class Internacionalizacion extends javax.swing.JFrame {
